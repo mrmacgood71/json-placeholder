@@ -2,6 +2,7 @@ package it.macgood.jsonplaceholder.data.repository
 
 import it.macgood.jsonplaceholder.data.remote.JsonPlaceholderApi
 import it.macgood.jsonplaceholder.data.remote.dto.PostDto
+import it.macgood.jsonplaceholder.data.remote.dto.UserDto
 import it.macgood.jsonplaceholder.domain.repository.JsonPlaceholderRepository
 import javax.inject.Inject
 
@@ -11,5 +12,9 @@ class JsonPlaceholderRepositoryImpl @Inject constructor(
 
     override suspend fun getPosts(): List<PostDto> {
         return api.getPosts()
+    }
+
+    override suspend fun getUser(): UserDto {
+        return api.getUser()
     }
 }

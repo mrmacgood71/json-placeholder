@@ -51,8 +51,8 @@ fun PostItem(
                     overflow = TextOverflow.Ellipsis,
                 )
                 Text(
-                    text = post.body + " | ",
-                    overflow = TextOverflow.Ellipsis,
+                    text = post.body,
+                    overflow = TextOverflow.Visible,
                 )
             }
         }
